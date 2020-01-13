@@ -1,3 +1,2 @@
 <?php
-echo 'Töötab <br>';
-print_r($_GET);
+require_once '../app/bootstrap.php';
