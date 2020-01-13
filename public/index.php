@@ -1,3 +1,3 @@
 <?php
-echo 'Töötab';
+echo 'Töötab <br>';
 print_r($_GET);
