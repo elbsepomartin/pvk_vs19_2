@@ -1,2 +1,3 @@
 <?php
-echo 'bootstrap.php on laetud';
+// laeme vajalikud raamatukogud
+require_once 'libraries/Core.php';
