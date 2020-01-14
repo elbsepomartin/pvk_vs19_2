@@ -6,7 +6,9 @@ class Core
     public function __construct()
     {
         $url = $this->getUrl();
+        echo '<pre>';
         print_r($url);
+        echo '</pre>';
     }
 
     public function getUrl(){
