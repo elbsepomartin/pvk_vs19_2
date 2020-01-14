@@ -8,8 +8,12 @@ class Core
     {
         $url = $this->getUrl();
         $controllerName = ucwords($url[0]);
-        $controllerfileName = '../app/controllers/'.$controllerName.'.php';
-        echo $controllerfileName;
+        $controllerFileName = '../app/controllers/'.$controllerName.'.php';
+        if(file_exists($controllerFileName)) {
+            $this->currentController = $controllerName;
+            unset($url[0]);
+        }
+        echo $controllerFileName;
         echo '<pre>';
         print_r($url);
         echo '</pre>';
