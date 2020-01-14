@@ -3,6 +3,7 @@
 
 class Core
 {
+    protected $currentController =
     public function __construct()
     {
         $url = $this->getUrl();
