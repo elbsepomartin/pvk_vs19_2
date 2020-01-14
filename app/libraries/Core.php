@@ -13,6 +13,8 @@ class Core
             $this->currentController = $controllerName;
             unset($url[0]);
         }
+        require_once $controllerFileName;
+        $this->currentController = new $this->currentController;
         echo $controllerFileName;
         echo '<pre>';
         print_r($url);
