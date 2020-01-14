@@ -7,6 +7,9 @@ class Core
     public function __construct()
     {
         $url = $this->getUrl();
+        $controllerName = ucwords($url[0]);
+        $controllerfileName = '../app/controllers/'.$controllerName.'.php';
+        echo $controllerfileName;
         echo '<pre>';
         print_r($url);
         echo '</pre>';
