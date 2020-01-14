@@ -12,6 +12,7 @@ class Core
     public function getUrl(){
         $url = $_GET['url'];
         $url = rtrim($url, '/');
+        $url = filter_var($url, FILTER_SANITIZE_URL);
         return $url;
     }
 }
