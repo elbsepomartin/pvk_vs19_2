@@ -11,6 +11,7 @@ class Core
 
     public function getUrl(){
         $url = $_GET['url'];
+        $url = rtrim($url, '/');
         return $url;
     }
 }
