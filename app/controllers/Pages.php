@@ -3,6 +3,9 @@
 
 class Pages extends Controller
 {
+    /**
+     * Pages constructor.
+     */
     public function __construct()
     {
     }
@@ -12,7 +15,7 @@ class Pages extends Controller
     }
 
     public function index() {
-        $data = array('title' => 'Page controller is loaded');
+        $data = array('title' => 'Pages controller is loaded');
         $this->view('pages/index', $data);
     }
 }
