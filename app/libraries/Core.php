@@ -15,7 +15,7 @@ class Core
             unset($url[0]);
         }
         require_once '../app/controllers/'.$this->currentController.'.php';
-        $this->currentController = new $this->currentController;0
+        $this->currentController = new $this->currentController;
         // method
         if (method_exists($this->currentController, $url[1])){
             $this->currentMethod = $url[1];
