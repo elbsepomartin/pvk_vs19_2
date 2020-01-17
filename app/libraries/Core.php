@@ -11,7 +11,7 @@ class Core
         // controller
         $controllerName = ucwords($url[0]);
         $controllerFileName = '../app/controllers/' . $controllerName . '.php';
-        if (file_exists($controllerFileName)) {
+        if (file_exists($controllerFileName)){
             $this->currentController = $controllerName;
             unset($url[0]);
         }
@@ -19,7 +19,7 @@ class Core
         $this->currentController = new $this->currentController;
         // method
         $methodName = $url[1];
-        if (method_exists($this->currentController, $methodName)) {
+        if (method_exists($this->currentController, $methodName)){
             $this->currentMethod = $methodName;
             unset($url[1]);
         }
