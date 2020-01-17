@@ -5,6 +5,7 @@ class Core
 {
     protected $currentController = 'Pages';
     protected $currentMethod = 'index';
+    protected $params = array();
     public function __construct()
     {
         $url = $this->getUrl();
@@ -21,6 +22,8 @@ class Core
             unset($url[1]);
         }
 
+        // parameetrid
+        $this->params = $url ? array_values($url) : array();
         echo '<pre>';
         print_r($url);
         echo '</pre>';
