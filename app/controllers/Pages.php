@@ -5,7 +5,6 @@ class Pages extends Controller
 {
     public function __construct()
     {
-        echo 'Pages is loaded<br>';
     }
 
     public function edit(){
@@ -13,6 +12,7 @@ class Pages extends Controller
     }
 
     public function index() {
-        $this->view('pages/index');
+        $data = array('title' => 'Page controller is loaded');
+        $this->view('pages/index', $data);
     }
 }
