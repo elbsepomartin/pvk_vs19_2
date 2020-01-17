@@ -4,6 +4,7 @@
 class Core
 {
     protected $currentController = 'Pages';
+    protected $currentMethod = 'index';
     public function __construct()
     {
         $url = $this->getUrl();
@@ -15,10 +16,11 @@ class Core
         }
         require_once $controllerFileName;
         $this->currentController = new $this->currentController;
-        echo $controllerFileName;
-        echo '<pre>';
-        print_r($url);
-        echo '</pre>';
+        // method
+        $methodName = $url[1];
+        if(method_exists($this->currentController, $methodName)){
+            $this->currentMethod = $methodName;
+        }
     }
 
     public function getUrl(){
