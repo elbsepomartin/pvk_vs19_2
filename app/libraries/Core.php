@@ -15,15 +15,17 @@ class Core
             unset($url[0]);
         }
         require_once '../app/controllers/'.$this->currentController.'.php';
-        $this->currentController = new $this->currentController;
+        $this->currentController = new $this->currentController;0
         // method
         if (method_exists($this->currentController, $url[1])){
             $this->currentMethod = $url[1];
             unset($url[1]);
         }
 
-        // parameetrid
+        // params
         $this->params = $url ? array_values($url) : array();
+        // call a callback function with url parameters - controller, method and params
+        call_user_func_array(array($this->currentController, $this->currentMethod), $this->params);
 
         echo '<pre>';
         print_r($url);
