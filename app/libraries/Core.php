@@ -24,6 +24,7 @@ class Core
 
         // parameetrid
         $this->params = $url ? array_values($url) : array();
+
         echo '<pre>';
         print_r($url);
         echo '</pre>';

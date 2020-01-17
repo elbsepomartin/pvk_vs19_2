@@ -8,7 +8,7 @@ class Posts
         echo 'Posts is loaded<br>';
     }
 
-    public function edit(){
+    public function edit($postId){
         echo 'edit method is loaded<br>';
     }
 }
