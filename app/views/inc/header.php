@@ -1,1 +1,10 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, user-scaleable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="<?php echo URLROOT;?>/css/style.css">
+    <title><?php echo PROJECT_NAME;?></title>
+</head>
+<body>
