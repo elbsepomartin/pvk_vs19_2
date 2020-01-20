@@ -5,5 +5,3 @@ define('PROJECT_NAME', 'pvk');
 define('URLROOT', 'http://'.$_SERVER['HTTP_HOST'].'/'.PROJECT_NAME);
 // rakenduse juurkataloog
 define('APPROOT', dirname(dirname(__FILE__)));
-
-echo APPROOT;
