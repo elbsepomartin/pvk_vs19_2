@@ -3,9 +3,7 @@
 
 class Pages extends Controller
 {
-    /**
-     * Page constructor.
-     */
+
     public function __construct()
     {
         $this->pagesModel = $this->model('Page');
