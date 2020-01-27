@@ -12,7 +12,6 @@ class Database
     private $stmt;
     private $error;
 
-
     public function __construct()
     {
         $dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname;
@@ -53,5 +52,19 @@ class Database
 
     public function execute(){
         $this->stmt->execute();
+    }
+
+    public function getAll(){
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function getOne(){
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function rowCount(){
+        return $this->stmt->rowCount();
     }
 }

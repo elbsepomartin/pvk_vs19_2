@@ -3,15 +3,16 @@
 
 class Pages extends Controller
 {
-
     public function __construct()
     {
         $this->pagesModel = $this->model('Page');
     }
 
     public function test(){
-        $this->pagesModel->addUser();
-        echo 'vist toimib :D';
+        $usersCount = $this->pagesModel->usersCount();
+        echo '<pre>';
+        print_r($usersCount);
+        echo '</pre>';
     }
 
     public function edit(){
